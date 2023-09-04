@@ -11,8 +11,8 @@ Student.prototype.setSubject = function(subjectName) {
 
 Student.prototype.addMarks = function(...marks) {
 	if (!this.marks) {
-        return;
-    }
+		return;
+	}
 	this.marks.push(...marks);
 }
 
