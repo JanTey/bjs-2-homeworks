@@ -14,4 +14,4 @@ function getUsersNamesInAgeRange(users, gender) {
         }
         return sum;
     }, 0);
-    return result
+    return result;
