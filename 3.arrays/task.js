@@ -15,8 +15,6 @@ function getUsersNamesInAgeRange(users, gender) {
         }
         return sum;
     }, 0);
-    return result
-<<<<<<< HEAD
+    return result;
 }
-=======
->>>>>>> a0e8a0468573f9311084e7f21ba1e2ac1a1b3d84
+
