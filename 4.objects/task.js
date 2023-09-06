@@ -10,8 +10,12 @@ Student.prototype.setSubject = function(subjectName) {
 }
 
 Student.prototype.addMarks = function(...marks) {
+<<<<<<< HEAD
 //	if (!this.marks) {
 	if (!this.hasOwnProperty("marks")) {	
+=======
+	if (!this.marks) {
+>>>>>>> 132ba35c90f2d9f602a47f5095add066a542e94d
 		return;
 	}
 	this.marks.push(...marks);

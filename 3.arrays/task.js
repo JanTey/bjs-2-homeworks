@@ -16,4 +16,7 @@ function getUsersNamesInAgeRange(users, gender) {
     }, 0);
     return result;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 132ba35c90f2d9f602a47f5095add066a542e94d
