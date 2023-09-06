@@ -10,14 +10,16 @@ Student.prototype.setSubject = function(subjectName) {
 }
 
 Student.prototype.addMarks = function(...marks) {
-	if (!this.marks) {
-        return;
-    }
+//	if (!this.marks) {
+	if (!this.hasOwnProperty("marks")) {	
+		return;
+	}
 	this.marks.push(...marks);
 }
 
 Student.prototype.getAverage = function() {
-	if (!this.marks || !this.marks.length) {
+//	if (!this.marks || !this.marks.length) {
+	if (!this.hasOwnProperty("marks") || !this.marks.length) {	
 		return 0;
 	}
 	const sum = this.marks.reduce((acc, index) => acc + index);

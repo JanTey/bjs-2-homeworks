@@ -7,8 +7,7 @@ function getUsersNamesInAgeRange(users, gender) {
     //let result = sample.reduce((sum, age) => sum += age, 0) / sample.length;
     //return (sample.length > 0) ? result : 0;
 
-    result = users.filter(user => user.gender === gender).map(old => old.age)
-    .reduce((sum, age, index, arr) => {
+    result = users.filter(user => user.gender === gender).map(old => old.age).reduce((sum, age, index, arr) => {
         sum = sum + age;
         if (index === arr.length - 1) {
             return sum / arr.length;
