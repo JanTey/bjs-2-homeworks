@@ -11,7 +11,7 @@ class AlarmClock {
 
 		if (this.alarmCollection.some((alarm) => alarm.time === time)) {
 			console.warn('Уже присутствует звонок на это же время');
-			return;
+			//return;
 		}
 
 		this.alarmCollection.push({
@@ -23,14 +23,13 @@ class AlarmClock {
 
 	removeClock(time) {
 		const filteredAlarms = this.alarmCollection.filter(
-			(alarm) => alarm.time !== time
+			alarm => alarm.time !== time
 		);
 		this.alarmCollection = filteredAlarms;
 	}
 
 	getCurrentFormattedTime() {
-		const now = new Date();
-		return now.toTimeString().slice(0, 5);
+		return new Date().toLocaleTimeString().slice(0, -3);
 	}
 
 	start() {
@@ -54,7 +53,7 @@ class AlarmClock {
 	}
 
 	resetAllCalls() {
-		this.alarmCollection.forEach((alarm) => (alarm.canCall = true));
+		this.alarmCollection.forEach(alarm => alarm.canCall = true);
 	}
 
 	clearAlarms() {
