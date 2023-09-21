@@ -29,7 +29,11 @@ class AlarmClock {
 	}
 
 	getCurrentFormattedTime() {
-		return new Date().toLocaleTimeString().slice(0, -3);
+	//	return new Date().toLocaleTimeString().slice(0, -3);
+		const timeNow = new Date();
+		const hh = "" + timeNow.getHours();
+		const mm = "" + timeNow.getMinutes();
+		return hh.padStart(2, "0") + ":" + mm.padStart(2, "0");
 	}
 
 	start() {
